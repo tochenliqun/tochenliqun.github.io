@@ -23,7 +23,7 @@ url     : # the base hostname & protocol for your site e.g. https://www.someone.
 baseurl : '/' # does not include hostname
 title   : CodeByCase
 description: > # this means to ignore newlines until "Language & timezone"
-  CodeByCase | 深耕代码 (Coding, Algorithm, BigData, Investor)
+  CodeByCase | 编程思维 (Coding, Algorithm, BigData, Investor)
 
 
 ## => Language and Timezone
