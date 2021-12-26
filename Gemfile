@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
-gem "github-pages", group: :jekyll_plugins
-# gem "jekyll-text-theme"
+#gem "github-pages", group: :jekyll_plugins
+#gemspec
 
-gemspec
+gem "webrick"
+gem "jekyll-text-theme"
