@@ -1,3 +1,24 @@
 /* start custom scss snippet */
 
+.column-left {
+  vertical-align: top;
+  width: 55%;
+}
+
+.column-right {
+  vertical-align: top;
+}
+
+.announce {
+  margin-left: 20px;
+}
+
+.announce ul {
+  line-height: 1.5em;
+}
+
+.column-right .announce ul {
+  line-height: 1.5em;
+}
+
 /* end custom scss snippet */

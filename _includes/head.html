@@ -14,11 +14,16 @@
 
 {%- include head/favicon.html -%}
 
+{%- include snippets/prepend-baseurl.html path='/assets/css/font-awesome.min.css' -%}
+<link rel="stylesheet" href="{{ __return }}">
+
 {%- include snippets/prepend-baseurl.html path='/assets/css/main.css' -%}
 <link rel="stylesheet" href="{{ __return }}">
 
+<!--
 {%- include snippets/get-sources.html -%}
 {%- assign _sources = __return -%}
 <link rel="stylesheet" href="{{ _sources.font_awesome }}" >
+-->
 
 {%- include head/custom.html -%}

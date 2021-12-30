@@ -12,7 +12,10 @@
           {%- assign _paths_root = site.paths.root | default: site.data.variables.default.paths.root  -%}
           {%- include snippets/get-nav-url.html path=_paths_root -%}
           {%- if site.title -%}
-            <a title="{%- if site.description -%}{{ site.description }}{%- endif -%}" href="{{ __return }}">{{ site.title }}</a>
+            <a title="{%- if site.description -%}{{ site.description }}{%- endif -%}" href="{{ __return }}">
+            	<!-- {{ site.title }} -->
+            	<span style="color: rgb(51, 204, 51);">Code</span><span style="color: rgb(102, 102, 102);">By</span><span style="color: rgb(204, 51, 102);">Case</span>
+            </a>
           {%- endif -%}
         </div>
         {%- if site.search.provider -%}
@@ -40,5 +43,24 @@
         </ul>
       </nav>
       {%- endif -%}
+      <div class="header__avatar">
+	      {%- if page.author -%}
+	        {%- assign _author = site.data.authors[page.author] -%}
+	      {%- else -%}
+	        {%- assign _author = site.author -%}
+	      {%- endif -%}
+         
+		  {%- if _author.avatar -%}
+		    {%- if _author.url -%}
+		    <a href="{{ _author.url }}" class="item__image" target="_blank">
+		    {%- endif -%}
+		      {%- include snippets/get-nav-url.html path=_author.avatar -%}
+		      {%- assign _author_avatar = __return -%}
+		      <img class="author-profile__avatar" itemprop="image" src="{{ _author_avatar }}" />
+		    {%- if _author.url -%}
+		    </a>
+		    {%- endif -%}
+		  {%- endif -%}      
+      </div>
     </div>
   </header>
