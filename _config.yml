@@ -18,44 +18,42 @@
 ##############################
 text_skin: dark # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: tomorrow-night # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-url     : # the base hostname & protocol for your site e.g. https://www.someone.com
+url     : "https://tochenliqun.github.io" # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : '/' # does not include hostname
 title   : CodeByCase
 description: > # this means to ignore newlines until "Language & timezone"
-  CodeByCase | 编程思维 (Coding, Algorithm, BigData, Investor)
-
+  CodeByCase | 编程思维 (Coding, Algorithm, Architect & Investor)
 
 ## => Language and Timezone
 ##############################
-lang: en # the language of your site, default as "en"
+lang: en # the language of your site, "en" (default, English), "zh"(简体中文), "zh-Hans"(简体中文), "zh-Hant"(繁體中文)
 timezone: America/New_York # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 
 ## => Author and Social
 ##############################
 author:
-  type      : # "person" (default), "organization"
-  name      : Your Name
-  url       :
-  avatar    : # path or url of avatar image (square)
-  bio       : I am an amazing person.
-  email     :
-  facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
-  twitter   : # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
-  weibo     : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
+  type      : person # "person" (default), "organization"
+  name      : Liqun Chen
+  url       : /about.html
+  avatar    : /assets/liqun-avatar.jpg
+  bio       : 18+ years extensive experience as a full stack software engineer and tech lead, focusing on Coding, Algorithm, Architect and be a Lifelong Investor. 
+  email     : codebycase@gmail.com
+  facebook  : chenliqun # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
+  twitter   : chenliqun # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
   googleplus: # "user_id"   the last part of your profile url, e.g. https://plus.google.com/u/0/user_id
   telegram  : # "user_name" the last part of your profile url, e.g. https://t.me/user_name
   medium    : # "user_name" the last part of your profile url, e.g. https://medium.com/user_name
   zhihu     : # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
   douban    : # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name
-  linkedin  : # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
-  github    : # "user_name" the last part of your profile url, e.g. https://github.com/user_name
+  linkedin  : chenliqun # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name/
+  github    : tochenliqun # "user_name" the last part of your profile url, e.g. https://github.com/user_name
   npm       : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
 
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: user_name/repo_name
+repository: codebycase/codebycase.github.io
 repository_tree: master
 
 
@@ -84,14 +82,14 @@ toc:
 ## => Markdown Enhancements
 ##############################
 ## Mathjax
-mathjax: # false (default), true
+mathjax: true # false (default), true
 mathjax_autoNumber: # false (default), true
 
 ## Mermaid
-mermaid: # false (default), true
+mermaid: true # false (default), true
 
 ## Chart
-chart: # false (default), true
+chart: true # false (default), true
 
 
 ## => Paginate
@@ -118,21 +116,20 @@ sharing:
 ## => Comments
 ##############################
 comments:
-  provider: false # false (default), "disqus", "gitalk", "valine", "custom"
+  provider: gitalk # false (default), "disqus", "gitalk", "custom"
 
   ## Disqus
   disqus:
-    shortname: # the Disqus shortname for the site
+    shortname: CodeByCase # the Disqus shortname for the site
 
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
-    clientID    : # GitHub Application Client ID
-    clientSecret: # GitHub Application Client Secret
-    repository  : # GitHub repo
-    owner       : # GitHub repo owner
-    admin: # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
-      # - your GitHub Id
+    clientID    : 4795af18f9129677a7ce # GitHub Application Client ID
+    clientSecret: cb054b9f817765c9b30928594cbd624b7f7734bf # GitHub Application Client Secret
+    repository  : codebycase.github.io # GitHub repo
+    owner       : codebycase # GitHub repo owner
+    admin: [codebycase, tochenliqun] # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
 
   ## Valine
   # please refer to https://valine.js.org/en/ for more info.
@@ -159,7 +156,7 @@ pageview:
 ## => Search
 ##############################
 search:
-  provider: default # "default" (default), false, "google", "custom"
+  provider: "default" # "default" (default), false, "google", "custom"
 
   ## Google Custom Search Engine
   google:
@@ -169,11 +166,11 @@ search:
 ## => Analytics
 ##############################
 analytics:
-  provider: false # false (default), "google", "custom"
+  provider: google # false (default), "google", "custom"
 
   ## Google Analytics
   google:
-    tracking_id : # Google Analytics id for the site
+    tracking_id : UA-109230910-1 # Google Analytics id for the site
     anonymize_ip: false # Anonymize IP tracking for Analytics
 
 
@@ -197,10 +194,21 @@ exclude:
   - package.json
   - /docs
   - /node_modules
-  - /screenshots
   - /test
   - /vendor
 
+collections:
+  pages:
+    output: true
+  coding:
+    output: true            
+  algorithm:
+    output: true
+  architect:
+    output: true
+  investor:
+    output: true
+    
 defaults:
   - scope:
       path: ""
@@ -208,14 +216,69 @@ defaults:
     values:
       layout: article
       sharing: true
-      license: true
+      license: false
       aside:
         toc: true
       show_edit_on_github: true
       show_subscribe: true
       pageview: true
-
-
+  - scope:
+      path: ""
+      type: articles
+    values:
+      show_date: false      
+  - scope:
+      path: "_coding"
+    values:
+      layout: article
+      categories: Coding      
+      sidebar:
+        nav: coding
+      license: false
+      sharing: true
+      aside:
+        toc: true
+      show_edit_on_github: true
+      show_date: true
+      pageview: true  
+  - scope:
+      path: "_algorithm"
+    values:
+      layout: article
+      cover: /assets/images/coding/computer-science.png
+      categories: Algorithm
+      sharing: true
+      aside:
+        toc: true
+      show_edit_on_github: true
+      show_date: false
+      pageview: true      
+  - scope:
+      path: "_architect"
+    values:
+      layout: article
+      cover: /assets/images/architect/bigdata-logo-1.png
+      categories: Architect
+      sharing: true
+      aside:
+        toc: true
+      show_edit_on_github: true
+      show_date: false
+      pageview: true 
+  - scope:
+      path: "_investor"
+    values:
+      layout: article
+      cover: /assets/images/investor/architect-logo-1.png
+      categories: Investor
+      sharing: true
+      aside:
+        toc: true
+      show_edit_on_github: true
+      show_subscribe: false      
+      show_date: false
+      pageview: true                  
+      
 ## => Plugins
 ##############################
 plugins:

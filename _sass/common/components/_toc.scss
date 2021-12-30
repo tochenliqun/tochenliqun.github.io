@@ -92,7 +92,7 @@ ul.toc--navigator {
     &.active {
       a {
         margin-left: -4px;
-        @include split-line(left, 4px, $main-color-1);
+        @include split-line(left, 3px, $main-color-1);
       }
     }
   }
