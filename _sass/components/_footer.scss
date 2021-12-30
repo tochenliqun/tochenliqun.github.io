@@ -8,6 +8,7 @@
   color: $footer-text-color;
   background: $footer-background;
   a {
+    font-weight: map-get($base, font-weight);
     @include link-colors ($footer-text-color, $main-color-1);
   }
   .site-info {
